@@ -49,3 +49,5 @@ application-*.yml
 # ========================
 *.tmp
 *.swp
+# Keep wrapper jar tracked
+!gradle/wrapper/gradle-wrapper.jar
