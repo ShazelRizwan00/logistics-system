@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Logistics</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <a href="/" class="brand">Logistics</a>
+  <div>
+    <button class="btn secondary" id="refresh" type="button">Refresh</button>
+    <button class="btn ghost" id="logout" type="button">Logout</button>
+  </div>
+</header>
+<main class="container">
+  <section class="card">
+    <h1>Dashboard</h1>
+    <p id="welcome" class="muted">Loading profile...</p>
+  </section>
+
+  <section class="card" id="customer-create-order">
+    <h2>Create Order (Customer)</h2>
+    <form id="order-form" class="stack two-col">
+      <label>Payment Amount <input type="number" step="0.01" min="0.01" name="amount" required /></label>
+      <label>Payment Method <input type="text" name="method" placeholder="CARD / COD / BANK_TRANSFER" required /></label>
+      <label>Shipment Origin <input type="text" name="origin" required /></label>
+      <label>Shipment Destination <input type="text" name="destination" required /></label>
+      <label>Package Weight (kg) <input type="number" step="0.1" min="0.1" name="weight" required /></label>
+      <label>Package Dimensions <input type="text" name="dimensions" placeholder="10x20x30 cm" required /></label>
+      <label class="span-2">Package Description <input type="text" name="description" /></label>
+      <button class="btn span-2" type="submit">Place order</button>
+    </form>
+    <p id="order-status" class="status"></p>
+  </section>
+
+  <section class="card">
+    <h2>Orders</h2>
+    <button class="btn secondary" id="load-orders" type="button">Load Orders</button>
+    <pre id="orders-result" class="result"></pre>
+  </section>
+
+  <section class="card">
+    <h2>Shipments</h2>
+    <button class="btn secondary" id="load-shipments" type="button">Load Shipments</button>
+    <pre id="shipments-result" class="result"></pre>
+  </section>
+
+  <section class="card" id="agent-deliveries">
+    <h2>My Deliveries (Delivery Agent)</h2>
+    <button class="btn secondary" id="load-deliveries" type="button">Load Deliveries</button>
+    <pre id="deliveries-result" class="result"></pre>
+  </section>
+</main>
+<script src="/js/api.js"></script>
+<script src="/js/dashboard.js"></script>
+</body>
+</html>

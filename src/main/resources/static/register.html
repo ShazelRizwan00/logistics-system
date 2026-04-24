@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Logistics</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<main class="container narrow">
+  <section class="card">
+    <h1>Create account</h1>
+    <form id="register-form" class="stack">
+      <label>Full name <input type="text" name="name" required minlength="2" /></label>
+      <label>Email <input type="email" name="contactInfo" required /></label>
+      <label>Password <input type="password" name="password" required minlength="8" /></label>
+      <label>Role
+        <select name="role" id="role" required>
+          <option value="CUSTOMER">Customer</option>
+          <option value="DELIVERY_AGENT">Delivery Agent</option>
+          <option value="ADMIN">Admin</option>
+        </select>
+      </label>
+      <label id="address-field">Address (for customers) <input type="text" name="address" /></label>
+      <label id="vehicle-field" class="hidden">Vehicle info (for delivery agents) <input type="text" name="vehicleInfo" /></label>
+      <button class="btn" type="submit">Register</button>
+    </form>
+    <p id="status" class="status"></p>
+    <p class="muted">Already registered? <a href="/login.html">Login</a></p>
+  </section>
+</main>
+<script src="/js/api.js"></script>
+<script src="/js/register.js"></script>
+</body>
+</html>

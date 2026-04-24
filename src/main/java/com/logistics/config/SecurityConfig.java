@@ -79,6 +79,8 @@ public class SecurityConfig {
 
             .authorizeHttpRequests(auth -> auth
                 // Public endpoints
+                .requestMatchers("/", "/index.html", "/login.html", "/register.html", "/dashboard.html").permitAll()
+                .requestMatchers("/css/**", "/js/**", "/favicon.ico").permitAll()
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/h2-console/**").permitAll()
                 .requestMatchers("/swagger-ui/**", "/api-docs/**", "/swagger-ui.html").permitAll()
