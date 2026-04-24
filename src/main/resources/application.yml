@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: logistics-system
+
+  # ─── Datasource ────────────────────────────────────────────────────────────
+  # Using H2 in-memory for development / CI; switch profile to "prod" to use
+  # PostgreSQL (see application-prod.yml).
+  datasource:
+    url: jdbc:h2:mem:logisticsdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  # ─── H2 Console (dev only) ─────────────────────────────────────────────────
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # ─── JPA / Hibernate ────────────────────────────────────────────────────────
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop           # "validate" or "none" in production
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+        # Enable second-level cache in production via EhCache / Redis
+        # jdbc.batch_size: 30          # batch inserts for bulk operations
+    open-in-view: false               # Avoids lazy-load pitfalls on HTTP layer
+
+  # ─── SQL Initialisation ─────────────────────────────────────────────────────
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:data.sql
+
+# ─── App-level JWT settings ─────────────────────────────────────────────────
+# Secret must be ≥ 256 bits (32 chars) for HS256.  Use env-var in prod.
+app:
+  jwt:
+    secret: "super-secret-key-for-logistics-system-32chars!!"
+    expiration-ms: 86400000           # 24 hours
+
+# ─── SpringDoc / Swagger UI ──────────────────────────────────────────────────
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# ─── Logging ────────────────────────────────────────────────────────────────
+logging:
+  level:
+    com.logistics: DEBUG
+    org.springframework.security: DEBUG
