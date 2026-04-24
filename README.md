@@ -1,16 +1,37 @@
 # Logistics and Delivery Tracking System
 
-## Introduction:
-The Logistics & Delivery Tracking System is designed to facilitate: 
+A Spring Boot application for order, shipment, and delivery lifecycle management with JWT-based authentication and a simple built-in web frontend.
 
-•	Efficient management of shipment operations 
+## Features
+- Authentication and registration (`CUSTOMER`, `DELIVERY_AGENT`, `ADMIN`)
+- Order placement and order status workflows
+- Shipment management and tracking timeline updates
+- Delivery assignment and delivery status updates
+- Static frontend pages for quick manual usage (`/`, `/login.html`, `/register.html`, `/dashboard.html`)
 
-•	Order Placement 
+## Tech Stack
+- Java 21
+- Spring Boot 3.3.x
+- Spring Security (JWT)
+- Spring Data JPA
+- H2 / PostgreSQL drivers
+- Gradle
 
-•	Package Handling
+## Run Locally
+1. Ensure Java 21 is installed.
+2. Run the application:
+   ```bash
+   ./gradlew bootRun
+   ```
+3. Open the web UI:
+   - `http://localhost:8080/`
+   - `http://localhost:8080/login.html`
+   - `http://localhost:8080/register.html`
+   - `http://localhost:8080/dashboard.html`
 
-•	Delivery Assignment
+## API Docs
+If enabled in your environment, OpenAPI/Swagger UI is available at:
+- `/swagger-ui/index.html`
 
-•	Real-Time Tracking.
-
-With the increasing demand for fast and transparent delivery services, there is a need for a system that provides visibility into shipment status and ensures smooth coordination between customers, delivery agents, and administrators.
+## Project Layout
+See `PROJECT_STRUCTURE.md` for a full repository layout and module breakdown.
