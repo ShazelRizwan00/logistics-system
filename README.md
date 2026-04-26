@@ -11,27 +11,22 @@ A Spring Boot application for order, shipment, and delivery lifecycle management
 
 ## Tech Stack
 - Java 21
-- Spring Boot 3.3.x
+- Spring Boot 
 - Spring Security (JWT)
 - Spring Data JPA
 - H2 / PostgreSQL drivers
 - Gradle
 
 ## Run Locally
-1. Ensure Java 21 is installed.
-2. Run the application:
-   ```bash
+In bash :
    ./gradlew bootRun
-   ```
-3. Open the web UI:
+
+Frontend pages
    - `http://localhost:8080/`
    - `http://localhost:8080/login.html`
    - `http://localhost:8080/register.html`
    - `http://localhost:8080/dashboard.html`
 
-## API Docs
-If enabled in your environment, OpenAPI/Swagger UI is available at:
-- `/swagger-ui/index.html`
 
-## Project Layout
-See `PROJECT_STRUCTURE.md` for a full repository layout and module breakdown.
+
+

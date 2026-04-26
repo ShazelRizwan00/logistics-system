@@ -1,24 +1,13 @@
 package com.logistics.config;
-
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.context.annotation.Configuration;
-
-/**
- * Configures the OpenAPI / Swagger UI documentation.
- *
- * The @SecurityScheme annotation tells Swagger UI to show a "Authorize"
- * button where users can paste their JWT. All controllers annotated with
- * @SecurityRequirement(name = "bearerAuth") will then include the header.
- *
- * Access Swagger UI at: http://localhost:8080/swagger-ui.html
- */
 @Configuration
 @OpenAPIDefinition(
-    info = @Info(
+    info = @Info(    //telling openapi about  API
         title       = "Logistics & Delivery Tracking API",
         version     = "1.0.0",
         description = "Production-grade backend for managing orders, shipments, deliveries, and tracking",
@@ -35,3 +24,4 @@ import org.springframework.context.annotation.Configuration;
 public class OpenApiConfig {
     // Configuration is entirely annotation-driven.
 }
+//API documentation configuration layer

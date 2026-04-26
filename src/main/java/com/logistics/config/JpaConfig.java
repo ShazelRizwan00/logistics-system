@@ -1,14 +1,11 @@
 package com.logistics.config;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-/** hello
- * JPA / Hibernate configuration.
- *
- * @EnableJpaAuditing: activates Spring Data's auditing support so that
+
+/**  @EnableJpaAuditing: activates Spring Data's auditing support so that
  *   @CreatedDate and @LastModifiedDate fields are auto-populated.
  *   Requires @EntityListeners(AuditingEntityListener.class) on each entity.
  *
@@ -20,5 +17,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories(basePackages = "com.logistics.repository")
 @EnableTransactionManagement
 public class JpaConfig {
-    // No additional beans needed – all configuration lives in application.yml
+    // No Manual Config Needed
 }
+//this is the config class for SpringJPA
