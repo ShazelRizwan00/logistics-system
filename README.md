@@ -8,7 +8,6 @@ A Spring Boot application for order, shipment, and delivery lifecycle management
 - Shipment management and tracking timeline updates
 - Delivery assignment and delivery status updates
 - Static frontend pages for quick manual usage (`/`, `/login.html`, `/register.html`, `/dashboard.html`)
-
 ## Tech Stack
 - Java 21
 - Spring Boot 

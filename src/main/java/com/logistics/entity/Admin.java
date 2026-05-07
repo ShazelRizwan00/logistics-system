@@ -1,8 +1,6 @@
 package com.logistics.entity;
-
 import com.logistics.enums.UserRole;
 import jakarta.persistence.*;
-
 /**
  * Represents an Admin user.
  *
@@ -34,10 +32,8 @@ public class Admin extends User {
     }
 
     // ─── equals / hashCode – delegated to parent ─────────────────────────────
-
     @Override
     public boolean equals(Object o) { return super.equals(o); }
-
     @Override
     public int hashCode() { return super.hashCode(); }
 }
