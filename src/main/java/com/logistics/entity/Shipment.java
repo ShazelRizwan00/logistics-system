@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
+//Final version of Shipment Class
 /**
  * Represents a physical consignment moving from origin to destination.
  *

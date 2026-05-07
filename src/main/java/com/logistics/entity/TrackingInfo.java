@@ -7,7 +7,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
-
+//final version of TrackingInfo Class
 /**
  * Immutable snapshot of a Shipment's location and status at a point in time.
  *
