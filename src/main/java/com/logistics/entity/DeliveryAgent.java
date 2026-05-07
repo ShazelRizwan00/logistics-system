@@ -1,8 +1,6 @@
 package com.logistics.entity;
-
 import com.logistics.enums.UserRole;
 import jakarta.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 //final DeliveryAgent File
