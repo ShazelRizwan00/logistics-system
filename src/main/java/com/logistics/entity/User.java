@@ -1,14 +1,12 @@
 package com.logistics.entity;
-
 import com.logistics.enums.UserRole;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
-
+//this is shazel testing the discord bot
 /**
  * Root of the user hierarchy.
  *
